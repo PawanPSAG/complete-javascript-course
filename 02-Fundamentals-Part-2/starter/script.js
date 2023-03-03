@@ -29,14 +29,29 @@
 // console.log(retirementAge(1990));
 
 //function calling other function
-function cutFruit(fruit) {
-  return fruit * 4;
-}
+// function cutFruit(fruit) {
+//   return fruit * 4;
+// }
 
-function fruitProcessor(apples, oranges) {
-  const applecut = cutFruit(apples);
-  const orangecut = cutFruit(oranges);
-  const juice = `Juice with ${applecut} apples Pieces and ${orangecut} oranges Pieces`;
-  return juice;
-}
-console.log(fruitProcessor(2, 3));
+// function fruitProcessor(apples, oranges) {
+//   const applecut = cutFruit(apples);
+//   const orangecut = cutFruit(oranges);
+//   const juice = `Juice with ${applecut} apples Pieces and ${orangecut} oranges Pieces`;
+//   return juice;
+// }
+// console.log(fruitProcessor(2, 3));
+// const calAge = function (birthyear) {
+//   return 2023 - birthyear;
+// };
+// const retirementAge = function (birthyear, name) {
+//   const calAge1 = calAge(birthyear);
+
+//   const retirement = 65 - calAge1;
+
+//   return retirement > 0
+//     ? `${name} retires in ${retirement}`
+//     : `${name} already retired`;
+// };
+
+// console.log(retirementAge(1990, "Pawan"));
+// console.log(retirementAge(1956, "Kaptan"));
