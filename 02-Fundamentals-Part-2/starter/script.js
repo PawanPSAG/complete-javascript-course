@@ -55,3 +55,39 @@
 
 // console.log(retirementAge(1990, "Pawan"));
 // console.log(retirementAge(1956, "Kaptan"));
+//Array in Java Script
+console.log("Array in Java Script");
+
+const friends = ["Pawan", "Peter", "John", "Mike"];
+// console.log(friends);
+
+// const years = new Array(1990, 1992, 1997, 1994);
+// console.log(years);
+// console.log(friends[0]);
+// console.log(friends[friends.length - 1]);
+
+// friends[2] = "Mayank";
+// console.log(friends);
+
+// const firstName = "Pawan";
+// const lastName = "Kumar";
+// const data = [
+//   firstName,
+//   lastName,
+//   2023 - 1990,
+//   "developer",
+//   friends,
+//   ["Harsi", "Soru"],
+// ];//console.log(data);
+// friends.unshift("Jaya");
+// console.log(friends);
+// friends.shift();
+// console.log(friends);
+// friends.pop();
+// console.log(friends);
+// console.log(friends.indexOf("Pawan"));
+// console.log(friends.includes("Pawan"));
+// console.log(friends.includes("Maya"));
+
+//Objects
+console.log(Objects in Javascript);
