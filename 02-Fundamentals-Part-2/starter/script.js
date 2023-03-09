@@ -56,9 +56,9 @@
 // console.log(retirementAge(1990, "Pawan"));
 // console.log(retirementAge(1956, "Kaptan"));
 //Array in Java Script
-console.log("Array in Java Script");
+// console.log("Array in Java Script");
 
-const friends = ["Pawan", "Peter", "John", "Mike"];
+// const friends = ["Pawan", "Peter", "John", "Mike"];
 // console.log(friends);
 
 // const years = new Array(1990, 1992, 1997, 1994);
@@ -90,4 +90,54 @@ const friends = ["Pawan", "Peter", "John", "Mike"];
 // console.log(friends.includes("Maya"));
 
 //Objects
-console.log(Objects in Javascript);
+// console.log("Objects in Javascript");
+// const pawan = {
+//   firstname: "Pawan",
+//   lastname: "Kumar",
+//   birthYear: 1990,
+//   job: "Salesforce Developer",
+//   friends: ["Sunil", "Manpreet", "Mohit"],
+//   hasDriverLicense: false,
+
+//   calcAge: function () {
+//     this.age = 2023 - pawan.birthYear;
+//     return this.age;
+//   },
+//   getSummary: function () {
+//     return `${this.firstname} is a ${this.age} old ${this.job}, and he has ${
+//       this.hasDriverLicense ? "a" : "no"
+//     } drivers License`;
+//   },
+// };
+// console.log(`Pawan Data ${pawan.job}`);
+// const interstedIn = prompt("What do you want to know about pawan");
+// console.log("interestedin " + interstedIn);
+
+// console.log(
+//   `${pawan.firstname} has ${pawan.children.length} frinds, and his best friend is called ${pawan.children[0]}`
+// );
+
+//dot vs brakets
+// console.log(pawan.calcAge(1990));
+// console.log(pawan["calcAge"](1990));
+// console.log(pawan.calcAge());
+// console.log(pawan["calcAge"]());
+// console.log(pawan.age);
+// console.log(pawan.getSummary());
+
+//Loops
+console.log("Array");
+const pawan = [
+  "Pawan",
+  "Kumar",
+  2023 - 1990,
+  "Developer",
+  ["Mayank", "Ajit", "Sunil", "Rahul"],
+];
+const type = [];
+console.log(pawan.length);
+for (let i = 0; i < pawan.length; i++) {
+  console.log(pawan[i], typeof pawan[i]);
+  type.push(typeof pawan[i]);
+}
+console.log(type);
