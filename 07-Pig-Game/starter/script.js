@@ -16,11 +16,29 @@ diceElement.classList.add('hidden');
 //set score to 0
 score0Element.textContent = 0;
 score1Element.textContent = 0;
-
-const scores = [0, 0];
+let scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
 let playing = true;
+
+const init = function () {
+  scores = [0, 0];
+  currentScore = 0;
+  activePlayer = 0;
+  playing = true;
+
+  score0Element.textContent = 0;
+  score1Element.textContent = 0;
+  current0Element.textContent = 0;
+  current1Element.textContent = 0;
+
+  player0Element.classList.add('player--active');
+  player1Element.classList.remove('player--active');
+  player0Element.classList.remove('player--winner');
+  player1Element.classList.remove('player--winner');
+};
+
+init();
 
 const switchPlayer = function () {
   //switch player
@@ -76,4 +94,8 @@ btnHold.addEventListener('click', function () {
     //switch to the next player
     switchPlayer();
   }
+});
+
+btnNew.addEventListener('click', function () {
+  init();
 });
