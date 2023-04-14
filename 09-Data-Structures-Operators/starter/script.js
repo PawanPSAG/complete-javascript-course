@@ -27,3 +27,9 @@ const restaurant = {
     },
   },
 };
+
+const [main, secoundry] = restaurant.mainMenu;
+console.log(main, secoundry);
+
+const [first, second] = restaurant.categories;
+console.log(first, second);
