@@ -32,6 +32,11 @@ const restaurant = {
   orderDelivery: function (obj) {
     console.log(obj);
   },
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your declicious pasta with ${ing1}, ${ing2} and ${ing3}`
+    );
+  },
 };
 
 restaurant.orderDelivery({
@@ -41,31 +46,31 @@ restaurant.orderDelivery({
   starterIndex: 2,
 });
 
-const { name, openingHours, categories } = restaurant;
-console.log(name, openingHours, categories);
+// const { name, openingHours, categories } = restaurant;
+// console.log(name, openingHours, categories);
 
-const {
-  name: restaurantName,
-  openingHours: hours,
-  categories: tags,
-} = restaurant;
-console.log(restaurantName, hours, tags);
+// const {
+//   name: restaurantName,
+//   openingHours: hours,
+//   categories: tags,
+// } = restaurant;
+// console.log(restaurantName, hours, tags);
 
-const { menu = [], starterMenu: starter = [] } = restaurant;
-console.log(menu, starter);
+// const { menu = [], starterMenu: starter = [] } = restaurant;
+// console.log(menu, starter);
 
-//mutating variables
-let a = 111;
-let b = 999;
-const obj = { a: 23, b: 7, c: 14 };
-({ a, b } = obj);
-console.log(a, b);
+// //mutating variables
+// let a = 111;
+// let b = 999;
+// const obj = { a: 23, b: 7, c: 14 };
+// ({ a, b } = obj);
+// console.log(a, b);
 
-//nested objects
-const {
-  fri: { open: o, close: c },
-} = openingHours;
-console.log(open, close);
+// //nested objects
+// const {
+//   fri: { open: o, close: c },
+// } = openingHours;
+// console.log(open, close);
 
 // const arr = [2, 3, 4];
 // const a = arr[0];
@@ -96,3 +101,50 @@ console.log(open, close);
 // //default values
 // const [p = 1, q = 1, w = 1] = [8, 9];
 // console.log(p, q, w);
+
+//Spread Operator
+// const arr = [7, 8, 9];
+// const badArr = [1, 2, arr[0], arr[1], arr[2]];
+
+// const newArr = [1, 2, ...arr];
+// console.log(badArr);
+// console.log(newArr);
+// console.log(...newArr);
+
+// const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+// console.log(newMenu);
+
+// //copy array
+// const mainMenuCopy = [...restaurant.mainMenu];
+
+// //join 2 array
+// const menu1 = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// console.log(menu1);
+
+// const str = 'Pawan';
+// console.log(...str);
+
+// const ingredients = [
+// prompt("Let's make pasta ingredient 1"),
+// prompt("Let's make pasta ingredient 2"),
+// prompt("Let's make pasta ingredient 3"),
+// ];
+
+// restaurant.orderPasta(...ingredients);
+
+// const newRestaurant = { ...restaurant, founder: 'Pawan Kumar', foundIn: 1999 };
+// console.log(newRestaurant);
+
+// const restaurantCopy = { ...restaurant };
+// restaurantCopy.name = 'Rista Rent';
+// console.log(restaurantCopy);
+
+//Rest Pattern and Parameters
+const { sat, ...other } = restaurant.openingHours;
+console.log(sat, other);
+
+const [, Pizzeria, , Organic, ...otherCat] = [
+  ...restaurant.categories,
+  ...restaurant.categories,
+];
+console.log(Organic, Pizzeria, otherCat);
