@@ -37,6 +37,9 @@ const restaurant = {
       `Here is your declicious pasta with ${ing1}, ${ing2} and ${ing3}`
     );
   },
+  orderPizza: function (mainIng, ...otherIng) {
+    console.log(`Your Pizaa with ${mainIng} ${otherIng} Ingrident`);
+  },
 };
 
 restaurant.orderDelivery({
@@ -45,6 +48,9 @@ restaurant.orderDelivery({
   mainIndex: 2,
   starterIndex: 2,
 });
+
+restaurant.orderPizza('Masroom', 'Onion', 'olives');
+restaurant.orderPizza('Masroom');
 
 // const { name, openingHours, categories } = restaurant;
 // console.log(name, openingHours, categories);
@@ -140,11 +146,62 @@ restaurant.orderDelivery({
 // console.log(restaurantCopy);
 
 //Rest Pattern and Parameters
-const { sat, ...other } = restaurant.openingHours;
-console.log(sat, other);
+// const [a, b, ...other] = [1, 2, 3, 4, 5];
+// console.log(a, b, other);
 
-const [, Pizzeria, , Organic, ...otherCat] = [
-  ...restaurant.categories,
-  ...restaurant.categories,
-];
-console.log(Organic, Pizzeria, otherCat);
+// const { sat, ...otherdays } = restaurant.openingHours;
+// console.log(sat, otherdays);
+
+// const add = function (...numbers) {
+//   let sum = 0;
+
+//   for (var i = 0; i < numbers.length; i++) {
+//     sum += numbers[i];
+//   }
+//   console.log(numbers);
+//   console.log(sum);
+// };
+
+// add(2, 3);
+// add(5, 3, 7, 2);
+// add(8, 2, 5, 3, 2, 1, 4);
+
+// const x = [23, 5, 6];
+// add(...x);
+// const [, Pizzeria, , Organic, ...otherCat] = [
+//   ...restaurant.categories,
+//   ...restaurant.categories,
+// ];
+// console.log(Organic, Pizzeria, otherCat);
+
+//logical operator
+console.log(3 || 'Jones');
+
+console.log('jones' && 23 && 'pawan');
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('Spinach', 'mushrooms');
+}
+
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+
+restaurant.numGuest = 0;
+
+const g1 = restaurant.numGuest || 10;
+const g2 = restaurant.numGuest ?? 10;
+console.log(`Guest 1 = ${g1} Guest 2 = ${g2}`);
+
+const rest1 = {
+  name: 'Capri',
+  numofguest: 20,
+};
+
+const rest2 = {
+  name: 'La Piazza',
+  owner: 'Pawan Kumar',
+};
+
+rest1.numerOfGuest = rest2.numofguest || 10;
+rest2.numerOfGuest = rest2.numofguest || 10;
+console.log(rest1.numofguest);
+console.log(rest2.numerOfGuest);
