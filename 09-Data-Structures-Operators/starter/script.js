@@ -205,3 +205,6 @@ rest1.numerOfGuest = rest2.numofguest || 10;
 rest2.numerOfGuest = rest2.numofguest || 10;
 console.log(rest1.numofguest);
 console.log(rest2.numerOfGuest);
+
+//for of loop
+for (const item of menu) console.log(item);
