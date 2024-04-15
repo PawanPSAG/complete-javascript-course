@@ -78,3 +78,6 @@ const obj = { m: 23, n: 2, v: 13 };
 console.log(m, n);
 
 //nested objects
+
+//Short Circuiting(&& and ||)
+console.log(3 || 'jones');
