@@ -106,12 +106,14 @@ const percentages = [
 console.log(percentages);
 
 /*
-Basic Array Operations (Methods)﻿
+Basic Array Operations (Methods)
 Create an array containing all the neighbouring countries of a 
-country of your choice. Choose a country which has at least 2 or 3 neighbours. Store the array into a variable called neighbours.
+country of your choice. Choose a country which has at least 2 or 
+3 neighbours. Store the array into a variable called neighbours.
 
 At some point, a new country called 'Utopia' is created in the 
-neighbourhood of your selected country, so add it to the end of the neighbours array.
+neighbourhood of your selected country, so add it to the end of 
+the neighbours array.
 
 Unfortunately, after some time the new country is dissolved, 
 so remove it from the end of the array.
@@ -124,4 +126,74 @@ that, find the index of the country in the neighbours array, and
 then use that index to change the array at that index position. 
 For example, you can search for 'Sweden' in the array, and then 
 replace it with 'Republic of Sweden'.
+*/
+
+const neighbours = ["Pakistan", "China", "Bangladesh", "Germany"];
+console.log(neighbours);
+
+neighbours.push("Utopia");
+console.log(neighbours);
+neighbours.pop();
+console.log(neighbours);
+
+if (!neighbours.includes("Germany")) {
+  console.log("Probably not a central european country :D");
+}
+neighbours[neighbours.indexOf("Bangladesh")] = "Mainmar";
+console.log(neighbours);
+
+/*
+Introduction to Objects
+Create an object called myCountry for a country of your choice, 
+containing properties country, capital, language, population and 
+neighbours (an array like we used in previous assignments).
+*/
+
+const myCountry = {
+  country: "Finland",
+  capital: "Helsinki",
+  language: "finnish",
+  population: 6,
+  neighbours: ["Norway", "Sweden", "Russia"],
+  checkIsland: "",
+  isIsland: true,
+};
+console.log(myCountry);
+
+/*
+Dot vs. Bracket Notation
+Using the object from the previous assignment, 
+log a string like this to the console: 'Finland has 6 million 
+finnish-speaking people, 3 neighbouring countries and a capital 
+called Helsinki'.
+
+Increase the country's population by two million using dot 
+notation, and then decrease it by two million using bracket 
+notation.
+*/
+
+console.log(`
+${myCountry.country} has ${myCountry.population} million 
+${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital 
+called ${myCountry.capital}
+`);
+
+myCountry.population += 2;
+console.log(myCountry);
+
+myCountry["population"] -= 2;
+console.log(myCountry);
+
+/*
+Object Methods
+Add a method called describe to the myCountry object. 
+This method will log a string to the console, similar to the 
+string logged in the previous assignment, but this time using 
+the 'this' keyword.
+
+Call the describe method.
+
+Add a method called checkIsland to the myCountry object. 
+This method will set a new property on the object, called 
+isIsland. isIsland will be true if there are no neighbouring countries, and false if there are. Use the ternary operator to set the property.
 */
