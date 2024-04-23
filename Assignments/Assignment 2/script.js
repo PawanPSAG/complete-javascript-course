@@ -195,5 +195,111 @@ Call the describe method.
 
 Add a method called checkIsland to the myCountry object. 
 This method will set a new property on the object, called 
-isIsland. isIsland will be true if there are no neighbouring countries, and false if there are. Use the ternary operator to set the property.
+isIsland. isIsland will be true if there are no neighbouring countries, 
+and false if there are. 
+Use the ternary operator to set the property.
 */
+
+const myCountryNew = {
+  country: "Finland",
+  capital: "Helsinki",
+  language: "finnish",
+  population: 6,
+  neighbours: ["Norway", "Sweden", "Russia"],
+  //neighbours: [],
+  checkIsland: "",
+  isIsland: true,
+
+  describe: function () {
+    return console.log(`${myCountry.country} has ${myCountry.population} million 
+    ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital 
+    called ${myCountry.capital}`);
+  },
+
+  checkIsland: function () {
+    console.log(this.neighbours.length);
+    return (this.isIsland = this.neighbours.length < 1 ? false : true);
+  },
+};
+
+myCountryNew.describe();
+myCountryNew.checkIsland();
+console.log(JSON.stringify(myCountryNew));
+
+/*
+Iteration: The for Loop
+There are elections in your country! in a small town, there are only 50 voters. 
+Use a for loop to simulate the 50 people voting, by logging a string like this 
+to the console (for numbers 1 to 50): 'Voter number 1 is currently voting'.
+*/
+
+for (let i = 0; i <= 50; i++) {
+  console.log("Voter Number ", i, "is currently voting");
+}
+
+/*
+Looping Arrays, Breaking and Continuing
+Let's bring back the populations array from a previous assignment.
+
+Use a for loop to compute an array called percentages2 containing the percentages of 
+the world population for the 4 population values. Use the function percentageWOrld1 
+that you created earlier.
+
+Confirm that percentages2 contains exactly the same values as the percentages array 
+that we created manually in the previous assignment, and reflect on how much better 
+this solution is.
+*/
+
+//populations = [1441, 78, 10, 170];
+const percentages2 = [];
+for (let i = 0; i < populations.length; i++) {
+  let avg = (populations[i] * 100) / 7900;
+  percentages2.push(avg);
+}
+
+console.log(percentages2);
+
+/*
+Looping Backwards and Loops in Loops
+
+Store this array of arrays into a variable called listOfNeighbours:
+
+[['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']];
+Log only the neighbouring countries to the console, one by one, not the entire arrays. 
+Log a string like 'Neighbour: Canada' for each country.
+
+You will need a loop inside a loop for this. This is actually a bit tricky, so don't 
+worry if it's too difficult for you! But you can still try to figure this out anyway 😉
+*/
+
+const listOfNeighbours = [
+  ["Canada", "Mexico"],
+  ["Spain"],
+  ["Norway", "Sweden", "Russia"],
+];
+
+for (let i = 0; i < listOfNeighbours.length; i++) {
+  for (let m = 0; m < listOfNeighbours[i].length; m++) {
+    console.log(`Neighbour: ${listOfNeighbours[i][m]}' for each country`);
+  }
+}
+
+/*
+The while Loop
+
+Recreate the challenge from the lecture Looping Arrays, Breaking and Continuing, 
+but this time using a while loop (call the array percentages3).
+
+Reflect on what solution you like better for this task: the for loop or the while loop?
+*/
+
+const percentages3 = [];
+
+let i = 0;
+while (i < populations.length) {
+  const avg = (populations[i] * 100) / 7900;
+  percentages3.push(avg);
+  i++;
+}
+
+console.log(percentages3);
