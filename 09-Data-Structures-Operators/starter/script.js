@@ -35,6 +35,8 @@ const restaurant = {
 /** 
  Destructuring Arrays
  */
+
+//Assignment Values
 const arr = [2, 3, 4, 5, 6];
 
 const [x, , z] = arr;
